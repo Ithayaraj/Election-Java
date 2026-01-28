@@ -1,0 +1,48 @@
+*change DB_Password in DatabaseConnector.java under db folder 
+*to run this code you will be out side the backend folder then type "./run.bat"
+*after one type run our code open mysql commant prompt then flows these steps
+	1.type mysql query "select electionsystem"
+	2.then insert to table province
+=======================================================================
+	INSERT INTO province (province_name) VALUES 
+('Western Province'), 
+('Central Province'), 
+('Southern Province'), 
+('Northern Province'), 
+('Eastern Province'), 
+('North Western Province'), 
+('North Central Province'), 
+('Uva Province'), 
+('Sabaragamuwa Province');
+===================================================================
+    3.then insert district details to district table
+INSERT INTO district (province_id, district_name, seat_count) VALUES
+(1, 'Colombo', 10),
+(1, 'Gampaha', 8),
+(1, 'Kalutara', 7),
+(2, 'Kandy', 7),
+(2, 'Matale', 6),
+(2, 'Nuwara Eliya', 6),
+(3, 'Galle', 5),
+(3, 'Matara', 6),
+(3, 'Hambantota', 6),
+(4, 'Jaffna', 5),
+(4, 'Kilinochchi', 4),
+(4, 'Mannar', 4),
+(4, 'Mullaitivu', 3),
+(4, 'Vavuniya', 5),
+(5, 'Trincomalee', 6),
+(5, 'Batticaloa', 5),
+(5, 'Ampara', 7),
+(6, 'Kurunegala', 7),
+(6, 'Puttalam', 5),
+(7, 'Anuradhapura', 6),
+(7, 'Polonnaruwa', 5),
+(8, 'Badulla', 6),
+(8, 'Monaragala', 5),
+(9, 'Ratnapura', 7),
+(9, 'Kegalle', 6);
+
+
+
+

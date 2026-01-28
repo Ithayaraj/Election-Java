@@ -1,0 +1,144 @@
+Province=>
+1.To GetAllProvince(GET)=>http://localhost:8080/province
+2.GetProvinceById=>http://localhost:8000/province/5
+body/text=>New Province
+3.To Get Districts under particular province(GET)=>http://localhost:8080/province/2/districts
+4.Get seats allocated by province ID=>  http://localhost:8000/province/9/seats
+4.To Create province(POST)=>http://localhost:8080/province
+{"province_name":"NewProvince"}
+5Update Province(PUT)=>http://localhost:8000/province/10
+body/raw/text=>TestChange
+6.Testo Delete Province=>http://localhost:8080/province/10
+==============================================================================================
+districts=>
+1.get AllDistricts(GET)=>http://localhost:8000/districts
+2.Get District By Id(GET)=>http://localhost:8000/districts/7
+3.Create NewDistrict(POST)=>http://localhost:8000/districts
+{
+   "district_name":"NewDistrict",
+    "seat_count": 6,
+    "province_id":5   
+}
+4.addMultipleDistricts=>http://localhost:8000/districts/multiple
+[
+ {
+  "district_name":"District04",
+  "seat_count":10,
+  "province_id": 5
+},{
+  "district_name":"District02",
+  "seat_count":20,
+  "province_id": 5
+},
+{
+  "district_name":"District03",
+  "seat_count":40,
+  "province_id": 5
+}
+]
+5.To update district(PUT)=>http://localhost:8000/districts/5             
+* body/raw/JSON=>{
+   {
+  "district_name": "NewName",
+  "seat_count": 10,
+  "province_id": 2
+}
+}
+6.To Delete District(DELETE)=>http://localhost:8000/districts/26
+===============================================================================================
+
+election=>
+1.To getAll election(GET)=>http://localhost:8080/election
+2.To create newElection(POST)=>http://localhost:8080/election     
+* body/raw/Text=>year=2002
+==============================================================================================
+party=>
+1.To GetAll party(GET)=>http://localhost:8000/party
+2.To Create Party(POST)=>http://localhost:8000/party                    
+* {
+  "party_name":"abc"
+}
+=================================================================================================
+
+party_votes=>
+1.To GetAll party_votes(GET)=>http://localhost:8000/parties_votes 
+2.To get total votes of party when given party name it will showns all totlal votes in all year=>http://localhost:8000/parties_votes/total_votes/b3
+2.To create party_votes(POST)=>http://localhost:8080/parties_votes      
+*body/raw/Text=>district_election_id=1&party_id=3&votes=1235
+=======================================================================================================
+
+seat_allocation=>
+1.To GetAll(GET)=>http://localhost:8080/seat_allocation
+2.Seatallocation get total(GET)=>http://localhost:8000/seat_allocation/total
+{
+  "party_name": "b2",
+  "year": "2024"
+}
+3.getSeatallocation result based on party that are appear in multipe year(GET)=>
+http://localhost:8000/seat_allocation/party
+{
+  "party_name": "b2"
+}
+4.To Create(POST)=> http://localhost:8080/seat_allocation            
+{
+  "district_election_id": 1,
+  "party_id": 2,
+  "bonus_round": 1,
+  "first_round": 2,
+  "second_round": 0,
+  "final_allocation": 3
+}
+5.updateSeatAllocation table based on total finalSeatscount not exceeded distric seatCount(PUT)=>
+http://localhost:8000/seat_allocation/update/34
+{
+  "district_election_id": 7,
+  "party_id": 31,
+  "bonus_round": 0,
+  "first_round": 2,
+  "second_round": 0,
+  "final_allocation": 2
+}
+6.Seatallocation Delete(DELETE)=>http://localhost:8000/seat_allocation/delete/35
+
+=============================================================================================================
+
+district_election=>
+1.To GetAll(GET)=>http://localhost:8080/dist_election
+2.getDistric_electionById==>http://localhost:8000/dist_election/4
+
+3.Creat(POST)=>http://localhost:8000/dist_election 
+{
+  "district_id": 1,
+  "election_id": 2,
+  "total_valid_votes_for_seat": 1000,
+  "disqualify_votes": 50,
+  "disqualify_party_count": 1,
+  "threshold_5_percent": 100
+}
+4.Get district data for a specific year across all districts
+=>http://localhost:8000/dist_election/all-by-year/2000
+5.update district_election=>http://localhost:8000/dist_election/7
+*{
+  "district_id": 1,
+  "election_id": 2,
+  "total_valid_votes_for_seat": 1000,
+  "disqualify_votes": 50,
+  "disqualify_party_count": 1,
+  "threshold_5_percent": 100
+}
+6.party name and year eneter it will return total seats of =>http://localhost:8000/seat_allocation/total
+{
+  "party_name": "b2",
+  "year": "2000"
+}
+---------------------------------
+province=7 (4GET/1POST/1PUT/1DELETE)=>H-|M-6|L-1
+districts=>7(3GET/2POST/1PUT/1DELETE)=>H|M-5|L-2
+election=>4(2GET/1POST/1DELETE)=>H|M-2|L-2
+districtElection=>6(3GET/1POST/1PUT/1DELETE)=>H-2|M-3|L-1
+partyVotes=>5(2GET/1POST/1PUT/1DELETE)=>H-1|M-3|L-1
+party=>6(3GET/1POST/1PUT/1DELETE)=>H-1|M-4|L-1
+seatAllocation=>6(3GET/1POST/1PUT/1DELETE)=>H-1|M-4|L-1
+H-5|M-27|L-9
+1    2    3
+Total=41

@@ -1,0 +1,7 @@
+1.Provice
+2.District
+3.Year
+4.Number of Political Partice
+5.Name of parites
+6.Valid Votes
+7.Each Party get votes

@@ -1,0 +1,123 @@
+components==>
+admin==>
+Footer
+Layout
+Navbar
+ProtectedRoute
+
+Pages======>
+AboutPage
+AdminPage
+HomePage
+LoginPage
+NationalResultPage
+ResultPage
+
+===============================================================>>>>>>>>>>>>>
+===============================HomePage======================
+----------------------------Header---------------------------
+Logo=>
+Heading=>Srilanka Election System->changeTo->Sri Lanka Voter Hub 
+header=>Increase header padding
+navbar=>add Mouse hover/remove underline/active navbar color change/adjust font size/add icon for each element of navbar
+whenever menu bar open after the click of that it will display all navbar elements(Home,Results,About,Admin Login) (here menu open display size decreased)
+admin Login button=>increase radius/check background color/
+
+-----------------------------Body----------------------------
+ElectionButton=>changeColor/check popup(adjust radius)/increase width
+delete Detailed Result=>*
+
+<div>tag=>Total Votes Cast=>Total Valid Votes
+<div>tag=>Invalid Votes=>Total Seat Allocation 
+<div>tag=>C=>Not change
+----------------------------------------------------------------------
+National Results=>header change to center
+->Vote Distribution=>header change to center
+-->pie chart hover change votes to valid votes
+
+->Vote Comparison with Previous Election=>Delete
+-----------------------------------------------------
+->Historical Vote Trends(overall place change to Vote Comparison with Previous Election)=>header change to center
+hover change->votes to valid votes
+
+->Explore Detailed Election Results->Change to center
+
+->delete View Detailed Result=>*
+-------------------------------Footer-------------------------------
+//Overall element will be in center
+->Sri Lanka Election System change name Sri Lanka Voter Hub
+->logo change
+->Quick Links->add icon for each navbar element/navbar element order in inline not block
+
+=========================================Result Page====================================
+-------------------------------------------------body----------------------------------------
+Election button=>Change to center & ElectionButton=>changeColor/check popup(adjust radius)/increase width
+
+Gampaha District Results
+->break "Seat Allocation" div from "District Results"
+->"Total Votes" change to "Total Valid Votes"
+-->remove "Valid Votes" & "Invalid Votes"
+-->add previous "Valid Votes" & "Invalid Votes" place "Qualify Votes" & "Disqualify Votes" & "Threshold (5%) Votes" 
+-->pie chart hover change value with "Votes" to "Valid Votes"
+
+->All-Island Summary->heading change to center
+-->Change "Total Votes" to "Total Valid Votes"
+-->Change "Invalid Votes" to "Total Seat Count"
+-->"Party Vote Share"=>Heading change to center
+-->"Seat Allocation"=>Heading change to center & add progress bar width percentage based on seats and total seats
+
+->Seat Allocation =>Overall SeatAllocation div Section become 2nd row of all result display &  Heading change to center place
+->In Table=>"Votes" Change to "Valid Votes"
+->Order Change as "Valid Votes","Bonus Round","1ST ROUND","2ND ROUND","TOTAL SEATS"
+
+==================================About Page=========================================
+About Sri Lankan Elections=>heading change to center place
+Sri Lanka's Local Government Electoral System=>All "Sri Lanka's Local Government Electoral System" Related div tag size become full width display size of "About Page" & "Sri Lanka's Local Government Electoral System" Heading change to center place
+
+
+============================LoginPage====================================
+login body contain logo at the top of the body part
+Increased padding size==>increased overall radius of body
+Username label & Password label align with proper padding
+sign in=>radius Increased & hover change with anothr light color of button background color
+->Please sign in to access the admin panel=>increased font size and best font family
+=================================================================================
+----------------------------------Admin Pannel------------------------------
+left side of admin pannel above "Election Admin Dashboard" create "Account Management Details" it shoud include 
+"Admin User Name" who will be currently login ,and "Switch" button as label 
+
+->Election Admin Dashboard =>Change heading position to center
+->add padding of each element in "Election Admin Dashboard"
+->add "Calculation Summary" label with icon in "Election Admin Dashboard"
+->div of "Election Admin Dashboard" is fixed
+-------------->>>>>>>>>Create page of "Calculation Summary"<<<<<<<<<<------------
+
+->Province Management->heading change to the center position
+->>Overall Province related data seperated by two coloumns
+
+after click "Add Provinces" button
+->only focused popup body not scroll background layer.
+->opened popup shoud contains "Number of Provinces to Add" value will be "0" and whenever click on that it will remove "0" and should be editable for any positive int number
+->After set value of "Number of province to Add" "Enter Provinces Names" label inputs shoud be validated with below conditions
+-->Duplicated Name shoud not we allowed 'here this duplicated name validate after the full Province name entered" if it is duplicated 
+
+---------------------------------------------------
+->Add Districts popup
+->after the add click button 
+-->only focused popup body not scroll background layer.
+-->Duplicated Name shoud not we allowed 'here this duplicated name validate after the full Province name entered" if it is duplicated 
+
+
+
+
+
+
+================================>>>>>>>>>>>>>
+MERN->
+M-MongoDB->Database                                      Mysql
+E->Express.JS/Node.JS (Framework)/BackEND/JavaScript     Core JAVA/Spring Boot
+R->React.JS/=>FrontEND/JavaSript                         React.JS                         
+N->Node.JS/BackEND/JavaScript                            CORE JAVA
+
+MEAN
+
